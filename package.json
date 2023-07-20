@@ -6,7 +6,8 @@
     "examples"
   ],
   "scripts": {
-    "build": "npm run-script build --workspace simple-markdown-preview"
+    "build": "npm run-script build --workspace simple-markdown-preview",
+    "version": "lerna version --exact --force-publish --no-push --no-git-tag-version"
   },
   "devDependencies": {
     "lerna": "^7.0.1",

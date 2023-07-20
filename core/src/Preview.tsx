@@ -2,7 +2,7 @@ import React, { useRef, forwardRef, useImperativeHandle } from 'react';
 import { Root, Element, RootContent } from 'hast';
 import styled from 'styled-components';
 import MarkdownPreview, { MarkdownPreviewProps, MarkdownPreviewRef } from '@uiw/react-markdown-preview';
-import { getMetaId, isMeta, getURLParameters } from 'markdown-react-code-preview-loader';
+import { getMetaId, isMeta, getURLParameters } from '@saqu/loader-md-react-preview/lib/utils/utils';
 import CodeLayout from 'react-code-preview-layout';
 import { useMdData, MdDataHandle } from './useMdData';
 import BackToUp, { BackToUpProps } from '@uiw/react-back-to-top';

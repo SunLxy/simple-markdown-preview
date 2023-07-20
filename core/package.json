@@ -27,7 +27,7 @@
   "dependencies": {
     "@uiw/react-back-to-top": "~1.2.3",
     "@uiw/react-markdown-preview": "~4.1.13",
-    "markdown-react-code-preview-loader": "~2.1.6",
+    "@saqu/loader-md-react-preview": "~0.1.6",
     "react-code-preview-layout": "~3.0.2",
     "styled-components": "~6.0.4"
   }

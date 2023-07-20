@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { CodeBlockData } from 'markdown-react-code-preview-loader';
+import type { CodeBlockData } from '@saqu/loader-md-react-preview/lib/interface';
 
 export type MdDataHandle = () => Promise<{ default: CodeBlockData }>;
 

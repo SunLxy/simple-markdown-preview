@@ -46,6 +46,14 @@ export interface SimplePreviewProps {
   handleMetaData?: (value: Record<string, string>) => HandleMetaDataReturn
   /**底部内容区域*/
   footer?: React.ReactNode
+  /**回到顶部操作按钮*/
+  backToUpProps?: Omit<BackToUpProps, "element">
+  /**
+   * 回到顶部操作按钮监听滚动节点
+  */
+  backToUpElement?: boolean | HTMLElement
+  /** @uiw/react-markdown-preview 组件中components参数 */
+  components?: Options['components']
 }
 
 ```

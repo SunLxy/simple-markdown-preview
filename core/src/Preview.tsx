@@ -65,6 +65,7 @@ export interface SimplePreviewProps {
    * 回到顶部操作按钮监听滚动节点
   */
   backToUpElement?: boolean | HTMLElement
+  /** @uiw/react-markdown-preview 组件中components参数 */
   components?: Options['components']
 }
 

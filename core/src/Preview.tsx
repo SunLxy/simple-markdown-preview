@@ -1,7 +1,10 @@
 import React, { useRef, forwardRef, useImperativeHandle } from 'react';
 import { Root, Element, RootContent } from 'hast';
 import styled from 'styled-components';
-import MarkdownPreview, { MarkdownPreviewProps, MarkdownPreviewRef } from '@uiw/react-markdown-preview';
+import MarkdownPreview, {
+  MarkdownPreviewProps, MarkdownPreviewRef,
+} from '@uiw/react-markdown-preview';
+import type { Options } from "react-markdown"
 import { getMetaId, isMeta, getURLParameters } from '@saqu/loader-md-react-preview/lib/utils/utils';
 import CodeLayout from 'react-code-preview-layout';
 import { useMdData, MdDataHandle } from './useMdData';
@@ -62,10 +65,11 @@ export interface SimplePreviewProps {
    * 回到顶部操作按钮监听滚动节点
   */
   backToUpElement?: boolean | HTMLElement
+  components?: Options['components']
 }
 
 export const SimplePreview = forwardRef((props: SimplePreviewProps, ref) => {
-  const { path, handleMetaData, footer, backToUpProps, backToUpElement } = props
+  const { path, handleMetaData, footer, backToUpProps, backToUpElement, components } = props
   const $dom = useRef<HTMLDivElement>(null);
   const { mdData, loading } = useMdData(path);
 
@@ -125,6 +129,7 @@ export const SimplePreview = forwardRef((props: SimplePreviewProps, ref) => {
               }
             }}
             components={{
+              ...components,
               div: ({ node, ...props }) => {
                 const { 'data-meta': meta, 'data-md': metaData, ...rest } = props as any;
                 const line = node.position?.start.line;

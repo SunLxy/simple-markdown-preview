@@ -1,13 +1,12 @@
-import React from 'react';
 import styled, { css } from 'styled-components';
 
-export const Wrapper = styled.div<{ loading: string }>`
+export const Wrapper = styled.div<{ $loading: boolean }>`
   position: absolute;
   height: 100%;
   width: 100%;
   z-index: 999;
   background: rgba(255,255,255,0.5);
-  ${props => props.loading === "false" && css`
+  ${props => !props.$loading && css`
       width: 0px;
       height: 0px;
       z-index: -99;
@@ -23,7 +22,7 @@ export const LoadBox = styled.div`
 
 const Loading = ({ loading }: { loading?: boolean }) => {
   return (
-    <Wrapper loading={`${loading}`} className='simple-loading' >
+    <Wrapper $loading={loading} className='simple-loading' >
       {loading && <LoadBox className='simple-loading-content' >Loading...</LoadBox>}
     </Wrapper>
   );

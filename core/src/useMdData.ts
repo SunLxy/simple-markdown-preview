@@ -8,6 +8,7 @@ export const useMdData = (path: MdDataHandle) => {
     source: '',
     components: {},
     data: {},
+    headings: []
   });
   const [loading, setLoading] = useState(false);
 

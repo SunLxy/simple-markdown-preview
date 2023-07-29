@@ -1,6 +1,6 @@
 {
   "name": "simple-markdown-preview",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "author": "SunLxy <1011771396@qq.com>",
   "homepage": "",
@@ -29,6 +29,6 @@
     "@uiw/react-back-to-top": "~1.2.3",
     "@uiw/react-markdown-preview": "~4.1.13",
     "react-code-preview-layout": "~3.0.2",
-    "styled-components": "~6.0.4"
+    "styled-components": "~6.0.5"
   }
 }

@@ -21,14 +21,14 @@ jobs:
 
     - name: Create Tag
       id: create_tag
-      uses: jaywcjlove/create-tag-action@v1.3.15
+      uses: jaywcjlove/create-tag-action@main
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         package-path: ./core/package.json
 
     - name: Generate changelog
       id: changelog
-      uses: jaywcjlove/changelog-generator@v1.5.7
+      uses: jaywcjlove/changelog-generator@main
       if: steps.create_tag.outputs.successful
       with:
         token: ${{ secrets.GITHUB_TOKEN }}

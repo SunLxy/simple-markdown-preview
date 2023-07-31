@@ -1,6 +1,5 @@
-import React, { useRef, forwardRef, useImperativeHandle, useEffect } from 'react';
+import { useRef, forwardRef, useImperativeHandle } from 'react';
 import { Root, Element, RootContent } from 'hast';
-import styled from 'styled-components';
 import MarkdownPreview from '@uiw/react-markdown-preview';
 import { getMetaId, isMeta, getURLParameters } from '@saqu/loader-md-react-preview/lib/utils/utils';
 import CodeLayout from 'react-code-preview-layout';
@@ -46,13 +45,6 @@ export const SimplePreview = forwardRef((props: SimplePreviewProps, ref) => {
   useImperativeHandle(ref, () => $dom.current)
 
   const { leftRender, rightRender } = useSimplePreview({ mdData, loading, $domRef: $dom })
-
-
-  useEffect(() => {
-    $dom.current.addEventListener("scroll", () => {
-      console.log(333)
-    })
-  }, [$dom.current])
 
   return (<PreviewBase style={style} className='simple-preview' >
     {header && <LayoutHead className='simple-preview-layout-head' >{header}</LayoutHead>}

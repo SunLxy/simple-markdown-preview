@@ -2,6 +2,9 @@
 import { defineConfig } from 'saqu';
 
 export default () => defineConfig({
+  output: {
+    publicPath: "./"
+  },
   module: {
     rules: [
       {

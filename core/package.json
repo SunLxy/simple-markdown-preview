@@ -25,7 +25,7 @@
     "react-dom": "~18.2.0"
   },
   "dependencies": {
-    "@saqu/loader-md-react-preview": "~0.1.16",
+    "@saqu/loader-md-react-preview": "~0.1.22",
     "@uiw/react-back-to-top": "~1.2.3",
     "@uiw/react-markdown-preview": "~4.1.13",
     "react-code-preview-layout": "~3.0.2",

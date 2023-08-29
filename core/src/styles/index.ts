@@ -1,4 +1,6 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import CodeLayout from 'react-code-preview-layout';
+const Code = CodeLayout.Code;
 
 
 export const PreviewBase = styled.div`
@@ -61,4 +63,8 @@ export const LayoutBackToUp = styled.div`
   position: absolute;
   bottom: 20px;
 
+`
+
+export const LanguagCode = styled(Code)`
+  padding: 0;
 `

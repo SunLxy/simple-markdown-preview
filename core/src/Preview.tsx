@@ -15,7 +15,8 @@ import {
   LayoutContent,
   LayoutFooter,
   LayoutHead,
-  LayoutBackToUp
+  LayoutBackToUp,
+  LanguagCode
 } from "./styles"
 
 const useDefault: SimplePreviewProps["useSimplePreview"] = () => ({
@@ -126,7 +127,7 @@ export const SimplePreview = forwardRef((props: SimplePreviewProps, ref) => {
                 <CodeLayout {...newParams?.layout}>
                   <Preview {...newParams?.preview}><Child /></Preview>
                   <Toolbar {...newParams?.toolbar} text={code}>{param.title || '示例'}</Toolbar>
-                  <Code {...newParams?.code}><pre {...rest} /></Code>
+                  <LanguagCode {...newParams?.code}><pre {...rest} /></LanguagCode>
                 </CodeLayout>
               );
             },

@@ -24,6 +24,19 @@ export default Demo;
 
 ```
 
+```tsx mdx:preview
+import React from "react"
+import { SimplePreview } from "simple-markdown-preview"
+
+const Demo = ()=>{
+
+  return (<div>案例</div>)
+
+}
+
+export default Demo;
+```
+
 ## 参数
 
 ```ts

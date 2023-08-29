@@ -6,6 +6,7 @@ on:
 
 env:
   SKIP_PREFLIGHT_CHECK: true
+  
 
 jobs:
   build-deploy:

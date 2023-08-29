@@ -14,5 +14,6 @@
   "devDependencies": {
     "lerna": "^7.0.1",
     "tsbb": "~4.1.14"
-  }
+  },
+  "version": "0.0.8"
 }

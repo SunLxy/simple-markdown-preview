@@ -43,13 +43,13 @@ export default Demo;
 
 export interface HandleMetaDataReturn {
   /**react-code-preview-layout 组件属性*/
-  layout?: Record<string, string>
+  layout?: CodePreviewProps
   /**react-code-preview-layout Preview 组件属性*/
-  preview?: Record<string, string>
+  preview?: PreviewProps
   /**react-code-preview-layout Code 组件属性*/
-  code?: Record<string, string>
+  code?: CodeProps
   /**react-code-preview-layout Toolbar 组件属性*/
-  toolbar?: Record<string, string>
+  toolbar?: ToolbarProps
 }
 
 export interface SimplePreviewProps {
